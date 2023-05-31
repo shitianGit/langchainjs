@@ -1,58 +1,65 @@
-# Welcome to LangChain
+欢迎来到LangChain
+=============
 
-LangChain is a framework for developing applications powered by language models. We believe that the most powerful and differentiated applications will not only call out to a language model via an API, but will also:
+LangChain是一个基于语言模型开发应用程序的框架。我们相信，最强大和有差异化的应用程序不仅会通过API调用语言模型，还将：
 
-- _Be data-aware_: connect a language model to other sources of data
-- _Be agentic_: allow a language model to interact with its environment
+*   _具备数据意识_: 将语言模型连接到其他数据源
+*   _具有代理能力_: 允许语言模型与其环境进行交互
 
-The LangChain framework is designed with the above principles in mind.
+LangChain框架是根据上述原则设计的。
 
-## Getting Started
+入门指南[​](#getting-started "Direct link to Getting Started")
+----------------------------------------------------------
 
-Checkout the guide below for a walkthrough of how to get started using LangChain to create a Language Model application.
+请查看下面的指南，了解如何使用LangChain创建语言模型应用程序。
 
-- [Quickstart, using LLMs](./getting-started/guide-llm.mdx)
-- [Quickstart, using Chat Models](./getting-started/guide-chat.mdx)
+*   [快速入门，使用LLMs](/docs/getting-started/guide-llm)
+*   [快速入门，使用聊天模型](/docs/getting-started/guide-chat)
 
-## Components
+组件[​](#components "Direct link to Components")
+----------------------------------------------
 
-There are several main modules that LangChain provides support for. For each module we provide some examples to get started and get familiar with some of the concepts. Each example links to API documentation for the modules used.
+LangChain提供支持的几个主要模块。对于每个模块，我们都提供了一些示例来开始并熟悉一些概念。每个示例链接到所使用模块的API文档。
 
-These modules are, in increasing order of complexity:
+这些模块按照复杂度递增的顺序排列：
 
-- [Schema](./modules/schema/): This includes interfaces and base classes used throughout the library.
+*   [模式](/docs/modules/schema/): 这包括整个库中使用的接口和基类。
+    
+*   [模型](/docs/modules/models/)：这包括与各种LLM、聊天模型和嵌入式模型的集成。
+    
+*   [提示](/docs/modules/prompts/)：这包括提示模板和与输出解析器和示例选择器等提示相关的功能
+    
+*   [索引](/docs/modules/indexes/)：这包括用于处理您自己的数据并使其准备好与语言模型交互的模式和功能（包括文档加载器、向量存储、文本分割器和检索器）。
+    
+*   [内存](/docs/modules/memory/)：内存是在链/代理的调用之间保持状态的概念。LangChain提供了一个标准接口来管理内存，一组内存实现以及使用内存的链/代理示例。
+    
+*   [链路](/docs/modules/chains/)：链不仅限于单个LLM调用，而是一系列调用（无论是对LLM还是其他实用程序）。LangChain为链提供了标准接口、许多与其他工具的集成以及常见应用的端到端链。
+    
+*   [代理人](/docs/modules/agents/)：代理人涉及使用LLM做出决策，选择该动作，看到观察结果，并重复此过程直至完成。LangChain为代理人提供了标准接口、可供选择的代理人以及端到端代理人示例。
+    
 
-- [Models](./modules/models/): This includes integrations with a variety of LLMs, Chat Models and Embeddings models.
+API 参考文档[​](#api-reference "Direct link to API Reference")
+----------------------------------------------------------
 
-- [Prompts](./modules/prompts/): This includes prompt Templates and functionality to work with prompts like Output Parsers and Example Selectors
+[在这里](/docs/api/)您可以找到LangChain中所有模块的API参考，以及所有导出类和函数的完整文档。
 
-- [Indexes](./modules/indexes/): This includes patterns and functionality for working with your own data, and making it ready to interact with language models (including document loaders, vectorstores, text splitters and retrievers).
+生产[​](#production "Direct link to Production")
+----------------------------------------------
 
-- [Memory](./modules/memory/): Memory is the concept of persisting state between calls of a chain/agent. LangChain provides a standard interface for memory, a collection of memory implementations, and examples of chains/agents that use memory.
+当您从原型设计进入生产阶段时，我们正在开发资源来帮助您实现这一目标。其中包括：
 
-- [Chains](./modules/chains/): Chains go beyond just a single LLM call, and are sequences of calls (whether to an LLM or a different utility). LangChain provides a standard interface for chains, lots of integrations with other tools, and end-to-end chains for common applications.
+*   [部署](/docs/production/deployment)：有关如何将您的应用程序部署到生产环境的资源。
+*   [事件/回调](/docs/production/callbacks)：有关LangChain模块公开的事件的资源。
+*   [跟踪](/docs/production/tracing)：有关如何使用跟踪来记录和调试应用程序的资源。
 
-- [Agents](./modules/agents/): Agents involve an LLM making decisions about which Actions to take, taking that Action, seeing an Observation, and repeating that until done. LangChain provides a standard interface for agents, a selection of agents to choose from, and examples of end-to-end agents.
+其他资源[​](#additional-resources "Direct link to Additional Resources")
+--------------------------------------------------------------------
 
-## API Reference
+我们认为以下资源可能对您开发应用程序有所帮助！
 
-[Here](./api/) you can find the API reference for all of the modules in LangChain, as well as full documentation for all exported classes and functions.
-
-## Production
-
-As you move from prototyping into production, we're developing resources to help you do so.
-These including:
-
-- [Deployment](./production/deployment): resources on how to deploy your application to production.
-- [Events/Callbacks](./production/callbacks): resources on the events exposed by LangChain modules.
-- [Tracing](./production/tracing): resources on how to use tracing to log and debug your application.
-
-## Additional Resources
-
-Additional collection of resources we think may be useful as you develop your application!
-
-- [LangChainHub](https://github.com/hwchase17/langchain-hub): The LangChainHub is a place to share and explore other prompts, chains, and agents.
-
-- [Discord](https://discord.gg/6adMQxSpJS): Join us on our Discord to discuss all things LangChain!
-
-- [Production Support](https://forms.gle/57d8AmXBYp8PP8tZA): As you move your LangChains into production, we'd love to offer more comprehensive support. Please fill out this form and we'll set up a dedicated support Slack channel.
+*   [LangChainHub](https://github.com/hwchase17/langchain-hub): LangChainHub是一个分享和探索其他提示、链条和代理的地方。
+    
+*   [Discord聊天室](https://discord.gg/6adMQxSpJS)：加入我们的Discord，讨论所有关于LangChain的事情！
+    
+*   [生产支持](https://forms.gle/57d8AmXBYp8PP8tZA)：当您将LangChains投入生产时，我们很乐意提供更全面的支持。请填写此表格，我们将设置一个专用的支持Slack频道。
+    
